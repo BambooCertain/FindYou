@@ -1,0 +1,187 @@
+<view class="content">
+    <view class="showMap">
+      <map class="map" 
+      id="myMap"
+      markers="{{markers}}" 
+      latitude="{{latitude}}"
+      longitude="{{longitude}}"
+      covers="{{covers}}"
+      show-location></map>
+    </view>
+    <view class="showInfo">
+      <view class="misser_info">
+        <view class="info_pic">
+          <image class="misser_image" src="{{task.misserDetailPics[0]}}"></image>
+        </view>
+        <view class="info_word">
+          <view class="info_misser">
+            <view class="misser">
+              <text class="misser_name">{{task.misserName}}</text>
+              <text class="misser_gender" wx:if="{{task.taskType == 0}}">{{task.missSex ? '男' : '女'}}</text>
+              <text class="misser_gender" wx:else >{{task.missSex ? '公' : '母'}}</text>
+              <text class="misser_age">{{task.taskType==1 ? task.misserAge : task.misserAge + '岁'}}</text>
+            </view>
+            <view class="info_volunteerNum">{{task.volunteerArray.length}}人正在寻找</view>
+          </view>
+          <view class="info_misser">
+            <text class="misser_address">走失地址:{{task.misserAddress}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="info_nav">
+        <button class="nav_btn {{navCheck == 0 ? 'active_btn' : ''}}" bindtap="infoShow">基本信息</button>
+        <button class="nav_btn {{navCheck == 1 ? 'active_btn' : ''}}" bindtap="threadShow">线索公告栏</button>
+        <button class="nav_btn {{navCheck == 2 ? 'active_btn' : ''}}" bindtap="weatherShow">天气</button>
+        <button class="nav_btn {{navCheck == 3 ? 'active_btn' : ''}}" bindtap="finishShow">找到你</button>
+      </view>
+      <view class="more_info">
+        <view wx:if="{{navCheck === 0}}" class="user_info">
+          <view class="info">
+            <text class="title">姓名</text>
+            <text class="value">{{task.misserName}}</text>
+        </view>
+        <view class="info">
+            <text class="title">搜寻范围</text>
+            <text class="value">2.2km</text>
+        </view>
+        <view class="info">
+            <text class="title">走失时间</text>
+            <text class="value">{{task.misserTime}}</text>
+        </view>
+        <view class="info">
+            <text class="title">联系人</text>
+            <view>
+                <text class="value" style="color: #ffa700;">{{task.familyName}}</text>
+             </view>
+        </view>
+        <view class="info">
+            <text class="title">联系方式</text>
+            <view>
+                <text class="value" style="color: #ffa700;">{{task.familyPhoneNumber}}</text>
+            </view>
+        </view>
+        <view class="info">
+            <text class="title">酬金</text>
+            <text class="value" style="color: #ffa700;">{{task.price}}元</text>
+        </view>
+
+
+        </view>
+        <view wx:elif="{{navCheck === 1}}" class="thread_info">
+          <view class="nav_btn">
+            <view class="time_chose">
+              <button class="time_rank {{timeChosen == 0 ?'time_chosen':''}}" bindtap="timeRank">时间倒序</button>
+              <button class="time_unirank {{timeChosen == 1 ?'time_chosen':''}}"  bindtap="timeUnrank">时间顺序</button>
+            </view>
+            <view class="create_thread">
+              <button class="create_btn">
+                <navigator open-type="navigate" url="../createTaskInfo/createTaskInfo?_taskid={{_taskid}}">上传线索</navigator>
+              </button>
+            </view>  
+          </view>
+          
+           
+          
+          
+          <view class="thread" wx:for="{{task.taskInfoArray}}" wx:for-index="index" wx:for-item="item">
+            <view class="provider">{{item.provider}}</view>
+            <view class="time">{{item.time}}</view>
+            <view class="value">{{item.value}}</view>
+            <view class="image_content">
+                <view class="image_box">
+                    <view class="image_list">
+                        <block wx:for="{{item.infoPics}}" wx:key="index" wx:for-item="item">
+                            <view class='image_item'>
+                              <image class="upload_image" src="{{item}}" data-id='{{index}}'></image>
+                            </view>
+                        </block>
+                    </view>  
+                  </view>
+              </view>
+          </view>
+        </view>
+        <view wx:elif="{{navCheck === 2}}" class="weather_info">
+          <view class="weather_main">
+            <image class="weather_image" src="cloud://findyoucloud-9gqeacwcc7c2605d.6669-findyoucloud-9gqeacwcc7c2605d-1306416417/appIcon/taskInfo/sunny.png" ></image>
+            <text class="weather_text">晴 25°C</text>
+          </view>
+          <view class="weather_more">
+            <view class="weather_item">
+              <view class="weather_title">
+                <image class="weather_icon" style="width: 35rpx;" src="cloud://findyoucloud-9gqeacwcc7c2605d.6669-findyoucloud-9gqeacwcc7c2605d-1306416417/appIcon/taskInfo/shidu.png"></image>
+                <text class="weather_label">湿度:</text>
+              </view>
+              <view class="weather_value">
+                <text>72%</text>
+              </view>
+            </view>
+            <view class="weather_item">
+              <view class="weather_title">
+                <image class="weather_icon" style="width: 30rpx;" src="cloud://findyoucloud-9gqeacwcc7c2605d.6669-findyoucloud-9gqeacwcc7c2605d-1306416417/appIcon/taskInfo/fengxiang.png"></image>
+                <text class="weather_label">风向:</text>
+              </view>
+              <view class="weather_value">
+                <text >1级 软风</text>
+              </view>
+            </view>
+            <view class="weather_item">
+              <view class="weather_title">
+                <image class="weather_icon" style="height: 30rpx;"src="cloud://findyoucloud-9gqeacwcc7c2605d.6669-findyoucloud-9gqeacwcc7c2605d-1306416417/appIcon/taskInfo/nengjiandu.png"></image>
+                <text class="weather_label">可见度:</text>
+              </view>
+              <view class="weather_value">
+                <text class>24.3km</text>
+              </view>
+            </view>
+
+          </view>
+        </view>
+        <view wx:else class="finish_task">
+          <view wx:if="{{isChecking == 0}}" class="uploadCheck">
+            <view class="finish_location">
+              <view class="my_location">
+                确认当前地点：{{location}}
+              </view>
+              <view class="refresh_location" bindtap="freshLocation">
+                重新定位
+              </view>
+            </view>
+            <view class="finish_user">
+              <view class="finish_time">
+                  当前时间：{{now}}
+              </view>
+              <view class="finish_info">
+                  个人信息： {{userName}}  {{phoneNumber}}
+              </view>
+            </view>
+            <form bindsubmit="checkSubmit">
+              <view class="image_content">
+                <view class="image_box">
+                    <view class="image_list">
+                        <block wx:for="{{detailPics}}" wx:key="index">
+                            <view class='image_item'>
+                              <image class="upload_image" src='{{item}}' data-id='{{index}}'></image>
+                            </view>
+                        </block>
+                        <view class="choose_image" bindtap="uploadImage">
+                            <view class="upload_input_box"></view>
+                        </view>
+                    </view>
+                    <view class="image_tips">上传照片进行核实,支持多张上传</view>
+                    
+                  </view>
+              </view>
+              <view class="info">
+                <textarea class="info_introduction" placeholder="请尽可能清楚地描述现场状况，便于进行验证" name="introduction"></textarea>
+              </view>
+              <button formType="submit" class="submit_btn">提交验证</button>
+              <view class="submit_tip">验证通过后可以获得对应酬金和积分</view>
+            </form>
+          </view>
+          <view wx:else class="Checking">
+            正在验证中
+          </view>
+        </view>
+      </view>
+    </view>
+</view>

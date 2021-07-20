@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "uploadImages":"../../components/uploadImages/uploadImages"
+  },
+  "navigationBarTitleText": "发布寻人启事"
+}

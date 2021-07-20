@@ -1,0 +1,16 @@
+<view>
+  {{aaa}}
+</view>
+  
+
+<view class="tabs">
+  <view class="tabs_title">
+    <!-- <view class="title_item" active>首页</view>
+    <view class="title_item">原创</view>
+    <view class="title_item">关于</view> -->
+    <view wx:for="{{tabs}}" wx:key="id" class="title_item {{item.isActive?'active':''}}" 
+    bindtap="handleItemTap"
+    data-index="{{index}}">{{item.name}}</view>
+  </view>
+  <view class = "tabs_content">内容</view>
+</view>

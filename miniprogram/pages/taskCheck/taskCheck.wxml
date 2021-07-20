@@ -1,0 +1,44 @@
+<view class="content">
+    <view class="check_list">
+        <view class="check_item" wx:for="{{checkArray}}" wx:for-index="index" wx:for-item="item"> 
+            <view class="item_top" >
+                验证编号:{{item._id}}
+            </view>
+            <view class="item_main">
+                <view class="name">
+                    <view class="title">姓名：</view>
+                    <view class="value">{{item.name}}</view>
+                </view>
+                <view class="phoneNumber">
+                    <view class="title">联系方式：</view>
+                    <view class="value">{{item.phoneNumber}}</view>
+                </view>
+                <view class="relation" >
+                    <view class="title">与走失人的关系：</view>
+                    <view class="value">{{item.relation}}</view>
+                </view>
+                <view class="introduction">
+                    <view class="title">具体情况介绍：</view>
+                    <view class="value">{{item.introduction}}</view>
+                </view>
+                <view class="image_content">
+                    <view class="image_box">
+                        <view class="image_list">
+                            <block wx:for="{{item.detailPics}}" wx:key="index">
+                                <view class='image_item'>
+                                  <image class="upload_image" src='{{item}}' data-id='{{index}}'></image>
+                                </view>
+                            </block>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="item_bottom">
+                <button class="refuse" bindtap="refuseCheck" data-id = "{{item._id}}" data-taskid="{{item._taskid}}">信息不正确</button>
+                <button class="accept" bindtap="acceptCheck" data-id = "{{item._id}}" data-taskid="{{item._taskid}}">验证通过</button>
+            </view>
+        </view>
+    </view>
+
+
+</view>

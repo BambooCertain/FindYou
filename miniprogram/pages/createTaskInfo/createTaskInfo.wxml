@@ -1,0 +1,26 @@
+<view class="content">
+    <form bindsubmit="taskInfoSubmit" style="width: 100%;">
+        <view class="info_content">
+            <view class="title">情况描述</view>
+            <textarea name="value" class="value"></textarea>
+            <view class="title">上传照片</view>
+            <view class="image_content">
+                <view class="image_box">
+                    <view class="image_list">
+                        <block wx:for="{{detailPics}}" wx:key="index">
+                            <view class='image_item'>
+                              <image class="upload_image" src='{{item}}' data-id='{{index}}'></image>
+                            </view>
+                        </block>
+                        <view class="choose_image" bindtap="uploadImage">
+                            <view class="upload_input_box"></view>
+                        </view>
+                    </view>
+                    <view class="image_tips">支持上传多张照片</view>
+                </view>
+            </view>
+        </view>
+       
+        <button class="submit_btn" form-type="submit">提交线索</button>
+    </form>
+</view>

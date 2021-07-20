@@ -1,0 +1,5 @@
+/* pages/market/market.wxss */
+.content{
+  display: flex;
+  justify-content: center;
+}

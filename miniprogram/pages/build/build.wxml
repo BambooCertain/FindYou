@@ -1,0 +1,96 @@
+<view class="content">
+    <view class="find">
+        <input class="find_input" type="text"/>
+        <button class="find_btn">查找</button>
+    </view>
+    <view class="nav">
+        <button class="nav_btn {{isChosen == 0 ? 'active_btn' : ''}}" bindtap="showTaskArray">寻人启事</button>
+        <button class="nav_btn {{isChosen == 1 ? 'active_btn' : ''}}" bindtap="showFindTaskArray">寻亲帮助</button>
+    </view>
+    <view class="my_taskArray" wx:if="{{isChosen == 0}}">
+        <view class="task_item" wx:for="{{myTaskArray}}" wx:for-index="index"  wx:for-item="item">
+            <view class="item_top">
+                <text class="item_time">发布时间:{{item.misserTime}}</text>
+                <navigator class="info_btn" open-type="navigate" url="../taskInfo/taskInfo?_id={{item._id}}">
+                    查看详情
+                </navigator>
+            </view>
+            <view class="item_main">
+                <view class="item_info">
+                    <view class="item_name">
+                        <view class="label">{{item.isCallPolice==1?'已报警':'未报警'}}</view>
+                        <view class="value">{{item.misserName}}</view>
+                    </view>
+                    <view class="item_num">
+                        <view class="label">寻找人数:</view>
+                        <view class="value">{{item.volunteerArray.length}}</view>
+                    </view>
+                </view>
+                <view class="item_time">
+                    <view class="label">走失时间</view>
+                    <view class="value">{{item.misserTime}}</view>
+                </view>
+                <view class="item_address">走失地点:{{item.misserAddress}}</view>
+                <view class="item_user">联系方式:{{item.familyName}} {{item.familyPhoneNumber}}</view>
+            </view>
+            <view class="item_bottom">
+                <view class="item_price">
+                    <image class="price_image" src="cloud://findyoucloud-9gqeacwcc7c2605d.6669-findyoucloud-9gqeacwcc7c2605d-1306416417/appIcon/build/price.png" >
+                        
+                    </image>
+                    <text class="price_text">酬金 {{item.price}}元</text>
+                </view>
+                <view class="item_btn">
+                    <button class="change_info">修改信息</button>
+                    <button wx:if="{{item.isFinish}}" class="finish_task">已完成</button>
+                    <button wx:else class="finish_task" >
+                        <navigator open-type="navigate"  url="../taskCheck/taskCheck?_taskid={{item._id}}">查看验证</navigator>
+                    </button>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="my_taskArray" wx:else>
+        <view class="task_item" wx:for="{{myFindTaskArray}}" wx:for-index="index"  wx:for-item="item">
+            <view class="item_top">
+                <text class="item_time">发布时间:{{item.misserTime}}</text>
+                <navigator class="info_btn" open-type="navigate" url="../findTaskMain/findTaskMain?task={{item._id}}">
+                    查看详情
+                </navigator>
+            </view>
+            <view class="item_main">
+                <view class="item_info">
+                    <view class="item_name">
+                        <view class="label">{{item.isCallPolice==1?'已报警':'未报警'}}</view>
+                        <view class="value">{{item.misserName}}</view>
+                    </view>
+                    <!-- <view class="item_num">
+                        <view class="label">寻找人数:</view>
+                        <view class="value">{{item.volunteerArray.length}}</view>
+                    </view> -->
+                </view>
+                <view class="item_time">
+                    <view class="label">发现时间</view>
+                    <view class="value">{{item.misserTime}}</view>
+                </view>
+                <view class="item_address">发现地点:{{item.misserAddress}}</view>
+                <view class="item_user">联系方式:{{item.familyName}} {{item.familyPhoneNumber}}</view>
+            </view>
+            <view class="item_bottom">
+                <view class="item_price">
+                    <!-- <image class="price_image" src="cloud://findyoucloud-9gqeacwcc7c2605d.6669-findyoucloud-9gqeacwcc7c2605d-1306416417/appIcon/build/price.png" >
+                        
+                    </image>
+                    <text class="price_text">酬金 5000元</text> -->
+                </view>
+                <view class="item_btn">
+                    <button class="change_info">修改信息</button>
+                    <button wx:if="{{item.isFinish}}" class="finish_task">已完成</button>
+                    <button wx:else class="finish_task" >
+                        <navigator open-type="navigate"  url="../taskCheck/taskCheck?_taskid={{item._id}}">查看验证</navigator>
+                    </button>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

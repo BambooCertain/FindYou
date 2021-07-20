@@ -1,0 +1,113 @@
+Page{
+    background-color: #ebece7;
+}
+.user_info_wrap{
+    height: 20vh;
+    // background: url('findyoucloud-9gqeacwcc7c2605d.6669-findyoucloud-9gqeacwcc7c2605d-1306416417/appIcon/home_bkg.jpg');
+    // background-color: var(--themeColor);
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    .user_bg{
+        position: absolute;
+        width: 100%;
+        height: 25vh;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .user_image_wrap{
+        position: relative;
+        top: 45%;
+        height: 300rpx;
+        width: 85%;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px gray;
+        // padding-bottom: 30rpx;
+        .user_info{
+            position: absolute;
+            left: 50%;
+            transform:translate(-50% , -20%);
+            text-align: center;
+            .user_icon{
+                overflow: hidden;
+                display: block;
+                width: 150rpx;
+                height: 150rpx;
+                border-radius: 50%;
+            }
+            .user_name{
+                padding-top: 20px;
+                display: block;
+                font-weight: bolder;
+                font-size: 18px;
+                /* font-size: 100rpx; */
+            }
+            
+        }
+        .user_value{
+            position: absolute;
+            left: 50%;
+            width: 100%;
+            top:90%;
+            transform: translate(-50% ,-80%);
+            background-color: #fff;
+            display: flex;
+            .user_value_item{
+                flex: 1;
+                text-align: center;
+                // padding-top: 5rpx;
+                // margin-left: 10%;
+                // margin-right: 10%;
+                .user_value_num{
+                    font-size: 16px;
+                    font-weight: bolder;
+                    
+                }
+                .user_value_name{
+                    font-size: 12px;
+                    color: #bfbfbf;
+                }
+            }
+        }
+    }
+}
+.user_content{
+    position: relative;
+    .app_main{
+        position: absolute;
+        width: 95%;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 80px;
+
+        .app_edit{
+            margin-top: 20rpx;
+            .app_edit_item{
+                display: flex;
+                // justify-content: center;
+                align-items: center;
+                margin-top: 10rpx;
+                // font-weight: bold;
+                border-radius: 10px;
+                // border: 1px solid #ccc;
+                font-size: 13px;
+                background-color: #fff;
+                padding: 25rpx;
+                .app_edit_icon{
+                    // height: 10px;
+                    width: 45rpx;
+                    height: 45rpx;
+                    margin-right: 20rpx;
+                    // object-fit: cover;
+                }
+                .app_edit_more{
+                    position: absolute;
+                    right: 5%;
+                }
+            }
+            
+        }
+    }
+}

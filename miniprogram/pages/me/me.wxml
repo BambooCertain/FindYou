@@ -1,0 +1,89 @@
+<!--pages/me/me.wxml-->
+<!-- <text>pages/me/me.wxml</text> -->
+<view class="user_info_wrap">
+  <image class="user_bg" src="cloud://findyoucloud-9gqeacwcc7c2605d.6669-findyoucloud-9gqeacwcc7c2605d-1306416417/appIcon/home_bkg.jpg"></image>
+  <view class="user_image_wrap">
+      
+      <view class="user_info">
+        <open-data class="user_icon" type="userAvatarUrl"></open-data>
+        <open-data class="user_name" type="userNickName" lang="zh_CN"></open-data>
+      </view>
+      <view class="user_value">
+        <view class="user_value_item">
+            <view class="user_value_num">{{point}}</view>
+            <view class="user_value_name">积分</view>             
+        </view>
+        <view class="user_value_item">
+          <view class="user_value_num">{{taskNumber}}</view>
+          <view class="user_value_name">参加任务</view>             
+        </view>    
+        <view class="user_value_item">
+          <view class="user_value_num">{{like}}</view>
+          <view class="user_value_name">收藏</view>             
+        </view>      
+        
+          
+      </view>
+    </view>
+
+
+  
+</view>
+<view class="user_content">
+  <view class="app_main">
+    <!-- 用户个人信息 -->
+    <view class="app_edit">
+      <view class="app_edit_item">
+        <image class="app_edit_icon" src="https://6669-findyoucloud-9gqeacwcc7c2605d-1306416417.tcb.qcloud.la/appIcon/me_shenfenzheng.png?sign=5b9018764924bfb55ceb67ac5973874f&t=1625917683"></image>
+        <text>实名认证</text>
+        <text style="color: #a1a1a1;" class="app_edit_more">已认证 ></text>   
+      </view>
+      <view class="app_edit_item app_edit_more">
+        <image class="app_edit_icon" src="https://6669-findyoucloud-9gqeacwcc7c2605d-1306416417.tcb.qcloud.la/appIcon/me_shouji.png?sign=7d28852456c4e5ce762c7e8b39b63f51&t=1625917701"></image>
+        <text>更换手机号</text>
+        <text style="color: #a1a1a1;" class="app_edit_more">{{phoneNumber}}</text> 
+      </view>
+    </view>
+    <!--  -->
+    <view class="app_edit">
+      <view class="app_edit_item">
+        <image class="app_edit_icon" src="https://6669-findyoucloud-9gqeacwcc7c2605d-1306416417.tcb.qcloud.la/appIcon/me_xinfeng.png?sign=53c5b83fbc7861a04d2e14549a215c00&t=1625917745"></image>
+        <text>我的消息</text>
+      </view>
+      <view class="app_edit_item app_edit_more">
+        <image class="app_edit_icon" src="https://6669-findyoucloud-9gqeacwcc7c2605d-1306416417.tcb.qcloud.la/appIcon/me_chengshi.png?sign=34af3de2ffc7c3964c02c42e44457e86&t=1625917759"></image>
+        <text>所在城市</text>
+        <text style="color: #a1a1a1;" class="app_edit_more">{{address}}</text> 
+      </view>
+      
+      <view class="app_edit_item app_edit_more">
+        <image class="app_edit_icon" src="https://6669-findyoucloud-9gqeacwcc7c2605d-1306416417.tcb.qcloud.la/appIcon/me_shengri.png?sign=9f699dad4d6dd8dc1c49712f06821fe6&t=1625917768"></image>
+        <text>生日日期</text>
+        <text style="color: #a1a1a1;" class="app_edit_more">{{birth}}</text> 
+      </view>
+    </view>
+    <view class="app_edit">
+      <navigator class="app_edit_item" open-type="navigate" url="../market/market">
+        <image class="app_edit_icon" src="https://6669-findyoucloud-9gqeacwcc7c2605d-1306416417.tcb.qcloud.la/appIcon/me_shangcheng.png?sign=7f5fcfa42fa4d4304a012238689d77ac&t=1625917778"></image>
+        <text>积分商城</text>
+      </navigator>
+      <view class="app_edit_item">
+        <image class="app_edit_icon" src="https://6669-findyoucloud-9gqeacwcc7c2605d-1306416417.tcb.qcloud.la/appIcon/me_gouwu.png?sign=35ff46627be1144bd0bf3141f5f2cd09&t=1625917787"></image>
+        <text>我的订单</text>
+      </view>
+      <view class="app_edit_item">
+        <image class="app_edit_icon" src="https://6669-findyoucloud-9gqeacwcc7c2605d-1306416417.tcb.qcloud.la/appIcon/me_dizhi.png?sign=08d6ed24f5ca4bdd41b7f4903b1028fe&t=1625917797"></image>
+        <text>收货地址</text>
+      </view>
+    </view>
+    <view class="app_edit">
+      <view class="app_edit_item">
+        <image class="app_edit_icon" src="https://6669-findyoucloud-9gqeacwcc7c2605d-1306416417.tcb.qcloud.la/appIcon/me_xinxi.png?sign=c21dfc397988cf253d61b03dbe2b0cd5&t=1625917019"></image>
+        <text>关于我们</text>
+      </view>
+    </view>
+
+    
+  </view>
+</view>
+  

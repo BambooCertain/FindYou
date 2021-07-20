@@ -1,0 +1,99 @@
+<view class="content">
+    <view class="find">
+        <input class="find_input" type="text"/>
+        <button class="find_btn">查找</button>
+    </view>
+    <view class="nav">
+        <button class="nav_btn {{isChosen == 0 ? 'active_btn':''}}" bindtap="showRunning">进行中</button>
+        <button class="nav_btn {{isChosen == 1 ? 'active_btn':''}}" bindtap="showChecking">待验证</button>
+        <button class="nav_btn {{isChosen == 2 ? 'active_btn':''}}" bindtap="showFinished">已完成</button>
+    </view>
+    <view wx:if="{{isChosen == 0}}" class="runTask_array">
+        <view class="task_item" wx:for="{{runningTaskList}}" wx:for-index="index" wx:for-item="item">
+            <view class="item_top">
+                <view class="item_name">
+                    {{item.misserName}} {{item.misserTime}}
+                </view>
+                <navigator class="item_nav" open-type="navigate" url="../taskInfo/taskInfo?_id={{item._id}}">
+                    点击查看详情 >
+                </navigator>
+            </view>
+            <view class="item_main">
+                <view class="item_left">
+                    <view class="item_address">
+                        <view style="display:inline-block; width: 10px; height: 10px; border-radius: 10px; background-color: #ffa700;margin-right: 15rpx;">
+                        </view>  
+                        {{item.misserAddress}}</view>
+                    <view class="item_volunteerNum">
+                        <view style="display:inline-block; width: 10px; height: 10px; border-radius: 10px; background-color: #0379ff;margin-right: 15rpx;">
+                        </view>  
+                        {{item.volunteerArray.length}}{{item.taskType==2?'人关注该任务':'人正在搜寻中...'}}</view>
+                </view>
+                <view class="item_right">
+                    <view class="task_status">进行中</view>
+                    <view class="item_price">酬金 {{item.price}}元</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view wx:elif="{{isChosen == 1}}" class="runTask_array">
+        <view class="task_item" wx:for="{{checkingTaskList}}" wx:for-index="index" wx:for-item="item">
+            <view class="item_top">
+                <view class="item_name">
+                    {{item.misserName}} {{item.misserTime}}
+                </view>
+                <navigator wx:if="{{item.taskType == 2}}" class="item_nav" open-type="navigate" url="../findTaskMain/findTaskMain?task={{item._id}}">
+                    点击查看详情 >
+                </navigator>
+                <navigator wx:else class="item_nav" open-type="navigate" url="../taskInfo/taskInfo?_id={{item._id}}">
+                    点击查看详情 >
+                </navigator>
+            </view>
+            <view class="item_main">
+                <view class="item_left">
+                    <view class="item_address">
+                        <view style="display:inline-block; width: 10px; height: 10px; border-radius: 10px; background-color: #ffa700;margin-right: 15rpx;">
+                        </view>  
+                        {{item.misserAddress}}</view>
+                    <view class="item_volunteerNum">
+                        <view style="display:inline-block; width: 10px; height: 10px; border-radius: 10px; background-color: #0379ff;margin-right: 15rpx;">
+                        </view>  
+                        {{item.volunteerArray.length}}{{item.taskType==2?'人关注该任务':'人正在搜寻中...'}}</view>
+                </view>
+                <view class="item_right">
+                    <view class="task_status" style="background-color:#f3a700;">验证中</view>
+                    <view class="item_price">酬金 {{item.price}}元</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view wx:else class="runTask_array">
+        <view class="task_item" wx:for="{{finishedTaskList}}" wx:for-index="index" wx:for-item="item">
+            <view class="item_top">
+                <view class="item_name">
+                    {{item.misserName}} {{item.misserTime}}
+                </view>
+            </view>
+            <view class="item_main">
+                <view class="item_left">
+                    <view class="item_address">
+                        <view style="display:inline-block; width: 10px; height: 10px; border-radius: 10px; background-color: #ffa700;margin-right: 15rpx;">
+                        </view>  
+                        {{item.misserAddress}}</view>
+                    <view class="item_volunteerNum">
+                        <view style="display:inline-block; width: 10px; height: 10px; border-radius: 10px; background-color: #0379ff;margin-right: 15rpx;">
+                        </view>  
+                        {{item.volunteerArray.length}}{{item.taskType==2?'人关注该任务':'人参与搜寻'}}</view>
+                </view>
+                <view class="item_right">
+                    <view class="task_status" style="background-color:red;">已完成</view>
+                    <view class="item_price">酬金 {{item.price}}元</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    
+
+      
+</view>
+

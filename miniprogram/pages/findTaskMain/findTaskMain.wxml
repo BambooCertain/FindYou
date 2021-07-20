@@ -1,0 +1,45 @@
+<view class="content">
+    <view class="title">
+        <text class="task_title">{{task.title}}</text>
+    </view>
+    <view class="info">
+        <text class="task_info">{{task.introduction}}</text>
+    </view>
+    <view class="pics" wx:for="{{task.misserDetailPics}}" wx:for-index="index" wx:for-item="item">
+        <image class="task_pic" mode="scaleToFill" src="{{item}}"></image>
+        
+    </view>
+    <view class="time">
+        <text class="task_time">2021-07-13</text>
+    </view>
+</view>
+<view class="more_info">
+    <view class="info">
+        <text class="title">姓名</text>
+        <text class="value">{{task.misserName}}</text>
+    </view>
+    <view class="info">
+        <text class="title">发现时间</text>
+        <text class="value">{{task.misserTime}}</text>
+    </view>
+    <view class="info">
+        <text class="title">联系人</text>
+        <view>
+            <text wx:if="{{isAccept == 1}}" class="value" style="color: #ffa700;">{{task.familyName}}</text>
+            <text wx:else class="value" style="color: #ffa700;">提交验证后可见</text>
+        </view>
+    </view>
+    <view class="info">
+        <text class="title">联系方式</text>
+        <view>
+            <text wx:if="{{isAccept == 1}}" class="value" style="color: #ffa700;">{{task.familyPhoneNumber}}</text>
+            <text wx:else class="value" style="color: #ffa700;">提交验证后可见</text>
+        </view>
+    </view>
+    <view  class="accept" >
+        <button wx:if="{{isAccept == 0}}" class="more_btn" bindtap="submitCheck">我是家属，点击提交验证</button>
+        <!-- <button wx:elif="{{isAccept == 1}}" class="more_btn" bindtap="submitCheck">再次提交验证</button> -->
+        <button wx:else class="more_btn" >验证审核请等待</button>
+    </view> 
+
+</view>

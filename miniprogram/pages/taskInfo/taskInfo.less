@@ -1,0 +1,451 @@
+/* pages/taskInfo/taskInfo.wxss */
+.content{
+    width: 100%;
+    .showMap{
+        width: 100%;
+        height: 60vh;
+        .map{
+            width: 100%;
+            // height: fit-content;
+            height: 100%;
+        }
+    }
+    .showInfo{
+        // display: flex;
+        width: 100%;
+        padding: 30rpx 10rpx;
+        .misser_info{
+            display: flex;
+            height: 60px;
+            .info_pic{
+                height: 60px;
+                .misser_image{
+                    overflow: hidden;
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+            .info_word{
+                padding:0rpx 10rpx;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .info_misser{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;   
+                    .misser{
+                        display: flex;
+                        justify-content: left;   
+                        align-items: center;
+                        .misser_name{
+                            font-size: 20px;
+                            font-weight: bolder;
+                            margin: 0rpx 5rpx;
+                        }
+                        .misser_gender{
+                            font-size: 15px;
+                            // font-weight: bolder;
+                            // margin: 0rpx 20rpx;
+                            margin: 0rpx 10rpx;
+                            color:#ababab;
+                        }
+                        .misser_age{
+                            font-size: 15px;
+                            // font-weight: bolder;
+                            margin: 0rpx 5rpx;
+                            color:#ababab;
+                        } 
+                    }
+                    .info_volunteerNum{
+                        display: flex;
+                        justify-content: right;   
+                        align-items: center;
+                        // padding: 20rpx 0rpx;
+                        font-size: 15px;
+                        font-weight: bolder;
+                        color:#006dff;
+                        // margin: 0rpx 20rpx;
+                    }
+
+                    .misser_address{
+                        display: flex;
+                        justify-content: left;   
+                        align-items: center;
+                        font-size: 15px;
+                        // font-weight: bolder;
+                        margin: 0rpx 5rpx;
+                        padding-bottom: 10rpx;
+
+                    }
+                }
+                
+            }
+
+        }
+        .info_nav{
+            margin-top: 15px;
+            display: flex;
+            
+            .nav_btn{
+                padding: 15rpx 0rpx;
+                font-size: 14px;
+                font-weight: bolder;
+                background-color: #fff;
+            }
+            .active_btn{
+                border-bottom: 5px solid #006dff;
+                color: #006dff;
+            }
+        }
+        .more_info{
+            padding: 20rpx 10rpx 30rpx 10rpx;
+            .user_info{
+                .info{
+                    padding: 10rpx 0rpx;
+                    display: flex;
+                    justify-content: space-between;
+                    .title{
+                        font-size: 13px;
+                    }
+                    .value{
+                        font-size: 13px;
+                    }
+                }
+            }
+            .thread_info{
+                .nav_btn{
+                    padding: 20rpx 10rpx;
+
+                    display: flex;
+                    justify-content: space-between;
+                    .time_chose{
+                        display: flex;
+                        // flex: 1;
+                        // justify-content: center;
+                        .time_rank{
+                            width: 200rpx;
+                            font-size: 12px;
+                            border-radius: 20px;
+                        }
+                        .time_unirank{
+                            width: 200rpx;
+                            font-size: 12px;
+                            border-radius: 20px;
+                        }
+                        .time_chosen{
+                            border: 1px solid #000;
+                        }
+                    }
+                    .create_thread{
+                        .create_btn{
+                            width: 200rpx;;
+                            font-size: 12px;
+                            border-radius: 20px;
+                            color: #238aff;
+                            border: 1px solid #238aff;
+                        }
+                    }
+                }
+                
+                
+                .thread{
+                    padding: 20rpx 15rpx;
+                    border-top: 1px solid #a2a2a2;
+                    border-bottom: 1px solid #a2a2a2;
+                    .provider{
+                        display: inline-block;
+                        font-size: 14px;
+                        padding-right: 30rpx;
+                        font-weight: bold;
+                    }
+                    .time{
+                        display: inline-block;
+                        font-size: 10px;
+                        color: #a2a2a2;
+                    }
+                    .value{
+                        padding-top: 20rpx;
+                        display: block;
+                        font-size: 12px;
+                    }
+                    .image_content{
+                        padding: 10rpx 0rpx;
+                        width: 100%;
+                        background-color: #fff;
+            
+                        .image_box{
+                            display: block;
+                            width: 92%;
+                            margin: auto;
+                            padding-top: 20rpx;
+                            .image_list{
+                                display: flex;
+                                // display: -webkit-flex;
+                                flex-direction: row;
+                                justify-content: flex-start;
+                                align-items: center;
+                                flex-wrap: wrap;
+                                .image_item{
+                                    display: inline-block;
+                                    // width: 25%;
+                                    text-align: left;
+                                    margin-right: 20rpx;
+                                    margin-bottom: 10rpx;
+                                    .upload_image{
+                                        width: 180rpx;
+                                        height: 180rpx;
+                                    }
+                                }
+                                .choose_image{
+                                    background-color: #fff;
+                                    .upload_input_box{
+                                        float: left;
+                                        position: relative;
+                                        margin-right: 9px;
+                                        margin-bottom: 9px;
+                                        width: 180rpx;
+                                        height: 180rpx;
+                                        border: 2px solid #d9d9d9;
+                                    }
+                                    .upload_input_box::before{
+                                        width: 2px;
+                                        height: 40px;
+                                        content: " ";
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        // -webkit-transform: translate(-50%, -50%);
+                                        transform: translate(-50%, -50%);
+                                        background-color: #d9d9d9;
+                                    }
+                                    .upload_input_box::after{
+                                        width: 40px;
+                                        height: 2px;
+                                        content: " ";
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        // -webkit-transform: translate(-50%, -50%);
+                                        transform: translate(-50%, -50%);
+                                        background-color: #d9d9d9;
+                                    }
+                                }
+                            }
+                            .image_tips{
+                                display: block;
+                                color: #666;
+                                font-size: 24rpx;
+                                padding-bottom: 20rpx;
+                            }
+                        }
+                    }
+                }
+            }
+            .weather_info{
+                .weather_main{
+                    display: flex;
+                    align-items: center;
+                    margin-top: 20rpx;
+                    .weather_image{
+                        width: 60rpx;
+                        height: 60rpx;
+                        margin-left: 50rpx;
+                        
+                    }
+                    .weather_text{
+                        font-size: 15px;
+                        font-weight: bolder;
+                        margin-left: 30rpx;
+                    }
+                }
+                .weather_more{
+                    padding: 40rpx 0rpx;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    .weather_item{
+                        display: flex;
+                        align-items: center;
+                        // padding-bottom: 20rpx;
+                        .weather_title{
+                            display: flex;
+                            align-items: center;
+                            .weather_icon{
+                                width: 40rpx;
+                                height: 35rpx;
+                                color: #b5b5b5;
+                                // width: 40rpx;
+                                // height: auto;
+                                // height: 40rpx;
+                            }
+                            .weather_label{
+                                font-size: 13px;
+                                font-weight: bold;
+                                // padding-bottom: 40rpx;
+                                padding-left: 5rpx;
+                                color: #b5b5b5;
+                            }
+                        }
+                        .weather_value{
+                            // display: flex;
+                            // align-items: center;
+                            font-size: 12px;
+                            font-weight: bold;
+                            // padding-bottom: 20rpx;
+                            padding-left: 10rpx;
+                        }
+                    }
+                }
+            }
+            .finish_task{
+                .uploadCheck{
+                    .finish_location{
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 10rpx 0rpx;
+                        .my_location{
+                            font-size: 15px;
+                            font-weight: bolder;
+                        }
+                        .refresh_location{
+                            font-size: 12px;
+                            font-weight: bolder;
+                            color: #44b15d;
+                        }
+                    }
+                    .finish_user{
+                        
+                        .finish_time{
+                            padding: 10rpx 0rpx;
+                            font-size: 12px;
+                            // font-weight: bolder;
+                            color: #a2a2a2;
+                        }
+                        .finish_info{
+                            padding: 10rpx 0rpx;
+                            font-size: 12px;
+                            // font-weight: bolder;
+                            color: #a2a2a2;
+                        }
+                    }
+                    .image_content{
+                        padding: 10rpx 0rpx;
+                        width: 100%;
+                        background-color: #fff;
+            
+                        .image_box{
+                            display: block;
+                            width: 92%;
+                            margin: auto;
+                            padding-top: 20rpx;
+                            .image_list{
+                                display: flex;
+                                // display: -webkit-flex;
+                                flex-direction: row;
+                                justify-content: flex-start;
+                                align-items: center;
+                                flex-wrap: wrap;
+                                .image_item{
+                                    display: inline-block;
+                                    // width: 25%;
+                                    text-align: left;
+                                    margin-right: 20rpx;
+                                    margin-bottom: 10rpx;
+                                    .upload_image{
+                                        width: 180rpx;
+                                        height: 180rpx;
+                                    }
+                                }
+                                .choose_image{
+                                    background-color: #fff;
+                                    .upload_input_box{
+                                        float: left;
+                                        position: relative;
+                                        margin-right: 9px;
+                                        margin-bottom: 9px;
+                                        width: 180rpx;
+                                        height: 180rpx;
+                                        border: 2px solid #d9d9d9;
+                                    }
+                                    .upload_input_box::before{
+                                        width: 2px;
+                                        height: 40px;
+                                        content: " ";
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        // -webkit-transform: translate(-50%, -50%);
+                                        transform: translate(-50%, -50%);
+                                        background-color: #d9d9d9;
+                                    }
+                                    .upload_input_box::after{
+                                        width: 40px;
+                                        height: 2px;
+                                        content: " ";
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        // -webkit-transform: translate(-50%, -50%);
+                                        transform: translate(-50%, -50%);
+                                        background-color: #d9d9d9;
+                                    }
+                                }
+                            }
+                            .image_tips{
+                                display: block;
+                                color: #666;
+                                font-size: 24rpx;
+                                padding-bottom: 20rpx;
+                            }
+                        }
+                    }
+                    .info{
+                        display: flex;
+                        justify-content: center;
+                        .info_introduction{
+                            width: 92%;
+                            height: 50px;
+                            padding: 10rpx;
+                            font-size: 13px;
+                            border: 1px solid #a2a2a2;
+                            border-radius: 5px;
+                        }
+                    }
+                    .submit_btn{
+                        width: 95%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        // height: 50px;
+                        // padding-top: 30rpx;
+                        height: 40px;
+                        margin-top: 30rpx;
+                        border-radius: 20px;
+                        background-color: #0581fe;
+                        color: #fff;
+                    }
+                    .submit_tip{
+                        margin-top: 10rpx;
+                        display: flex;
+                        justify-content: center;
+                        color: #666;
+                        font-size: 24rpx;
+                        padding-bottom: 20rpx;
+                    }
+                }
+                .Checking{
+                    width: 100%;
+                    height: 200px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 20px;
+                    font-weight: bolder;
+                }
+            }
+        }
+    }
+}
+

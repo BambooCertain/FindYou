@@ -1,0 +1,184 @@
+.content {
+  padding: 10rpx 10rpx;
+}
+.content .find {
+  display: flex;
+  padding: 10rpx 10rpx;
+  justify-content: center;
+}
+.content .find .find_input {
+  width: 70%;
+  border: 1px solid #a2a2a2;
+  height: 40px;
+  border-radius: 10px;
+}
+.content .find .find_btn {
+  background-color: #238aff;
+  width: 25%;
+  border-radius: 20px;
+  color: #fff;
+}
+.content .nav {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0rpx;
+}
+.content .nav .nav_btn {
+  background-color: #fff;
+  font-size: 17px;
+}
+.content .nav .active_btn {
+  border-bottom: 5px solid #006dff;
+}
+.content .my_taskArray {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0px 0px 10px #a2a2a2;
+}
+.content .my_taskArray .task_item {
+  border-radius: 10px;
+  padding: 10rpx 15rpx;
+  border: 1px solid #e1e1e1;
+}
+.content .my_taskArray .task_item .item_top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rpx 20rpx;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom: 1px solid #f6f6f6;
+  background-image: linear-gradient(to right, #ffe3cb, #ffffff);
+}
+.content .my_taskArray .task_item .item_top .item_time {
+  font-size: 15px;
+  font-weight: bolder;
+}
+.content .my_taskArray .task_item .item_top .info_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  font-size: 15px;
+  padding: 10rpx 15rpx;
+  border-radius: 20px;
+  margin: 10rpx;
+  color: #fff;
+  background-color: #2eadf9;
+}
+.content .my_taskArray .task_item .item_main .item_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .my_taskArray .task_item .item_main .item_info .item_name {
+  display: flex;
+  margin-top: 15rpx;
+  margin-left: 20rpx;
+}
+.content .my_taskArray .task_item .item_main .item_info .item_name .label {
+  background-color: #ffa400;
+  color: #fff;
+  font-size: 13px;
+  padding: 5rpx 15rpx;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.content .my_taskArray .task_item .item_main .item_info .item_name .value {
+  font-size: 15px;
+  font-weight: bolder;
+  margin-left: 15rpx;
+}
+.content .my_taskArray .task_item .item_main .item_info .item_num {
+  display: flex;
+  align-items: center;
+  margin-right: 30rpx;
+}
+.content .my_taskArray .task_item .item_main .item_info .item_num .label {
+  font-size: 12px;
+  color: #a8a8a8;
+  margin-right: 10rpx;
+}
+.content .my_taskArray .task_item .item_main .item_info .item_num .value {
+  font-size: 15px;
+  font-weight: bolder;
+}
+.content .my_taskArray .task_item .item_main .item_time {
+  display: flex;
+  margin-top: 15rpx;
+  margin-left: 20rpx;
+}
+.content .my_taskArray .task_item .item_main .item_time .label {
+  background-color: #002242;
+  color: #fff;
+  font-size: 13px;
+  padding: 5rpx 15rpx;
+}
+.content .my_taskArray .task_item .item_main .item_time .value {
+  font-size: 15px;
+  color: #848484;
+  margin-left: 20rpx;
+}
+.content .my_taskArray .task_item .item_main .item_address {
+  padding: 0rpx 15rpx;
+  font-size: 15px;
+  margin-top: 15rpx;
+  margin-left: 20rpx;
+  margin-bottom: 10rpx;
+}
+.content .my_taskArray .task_item .item_main .item_user {
+  padding: 0rpx 15rpx;
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+  font-size: 15px;
+  font-weight: bolder;
+  margin-bottom: 20rpx;
+}
+.content .my_taskArray .task_item .item_bottom {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #f6f6f6;
+}
+.content .my_taskArray .task_item .item_bottom .item_price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .my_taskArray .task_item .item_bottom .item_price .price_image {
+  width: 20px;
+  height: 20px;
+  margin: 5rpx 10rpx;
+  margin-left: 30rpx;
+}
+.content .my_taskArray .task_item .item_bottom .item_price .price_text {
+  color: #ff3f3f;
+  font-size: 15px;
+  font-weight: bolder;
+}
+.content .my_taskArray .task_item .item_bottom .item_btn {
+  width: 50%;
+  display: flex;
+  justify-content: right;
+  padding: 10rpx 0rpx;
+  margin-right: 15rpx;
+}
+.content .my_taskArray .task_item .item_bottom .item_btn .change_info {
+  width: 50%;
+  font-size: 15px;
+  border-radius: 20px;
+  padding: 10rpx 15rpx;
+  color: #b8b8b8;
+  border: 1px solid #b8b8b8;
+  margin-right: 15rpx;
+}
+.content .my_taskArray .task_item .item_bottom .item_btn .finish_task {
+  width: 50%;
+  font-size: 15px;
+  padding: 10rpx 15rpx;
+  border-radius: 20px;
+  background-color: #ffa700;
+  color: #fff;
+}

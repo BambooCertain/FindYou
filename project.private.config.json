@@ -1,0 +1,126 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "db guide",
+          "pathName": "pages/databaseGuide/databaseGuide",
+          "query": ""
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/me/me",
+          "pathName": "pages/me/me",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "登录页面",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "个人中心",
+          "pathName": "pages/me/me",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "注册",
+          "pathName": "pages/register/register",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "首页",
+          "pathName": "pages/home/home",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "创建寻人任务",
+          "pathName": "pages/createTask/createTask",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "上传图片",
+          "pathName": "pages/demo3/demo3",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/taskMain/taskMain",
+          "pathName": "pages/taskMain/taskMain",
+          "query": "task=cbddf0af60ec32d0166152be2b08df77",
+          "scene": null
+        },
+        {
+          "name": "任务详情",
+          "pathName": "pages/taskInfo/taskInfo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "任务详情",
+          "pathName": "pages/taskInfo/taskInfo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "人物列表",
+          "pathName": "pages/task/task",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我发布的",
+          "pathName": "pages/build/build",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "积分商城",
+          "pathName": "pages/market/market",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "提交验证",
+          "pathName": "pages/findCheck/findCheck",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "验证列表",
+          "pathName": "pages/taskCheck/taskCheck",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "创建线索",
+          "pathName": "pages/createTaskInfo/createTaskInfo",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

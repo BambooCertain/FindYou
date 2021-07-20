@@ -1,0 +1,160 @@
+<view class="home_nav">
+    <!-- <view class="home_address">嘉宾花园社区</view> -->
+    <image class="background_image" src="cloud://findyoucloud-9gqeacwcc7c2605d.6669-findyoucloud-9gqeacwcc7c2605d-1306416417/appIcon/home_bkg.jpg"></image>
+    <view class="task">
+        <view class="task_create">
+            <navigator class="task_item" open-type="navigate" url="../createTaskFind/createTaskFind">
+                <view class="task_image">
+                    <image class="task_icon" src="https://6669-findyoucloud-9gqeacwcc7c2605d-1306416417.tcb.qcloud.la/appIcon/home_icon1.png?sign=d0642f5dfacfea26399bf4a664ca8bb3&t=1625919359"></image>
+                </view>
+                <view class="task_text">
+                    <text class="task_title">帮助寻人</text>
+                    <text class="task_tip">报告走失人员</text>
+                </view>
+            </navigator>
+            <navigator class="task_item" open-type="navigate" url="../createMain/createMain">
+                <view class="task_image">
+                    <image class="task_icon" src="https://6669-findyoucloud-9gqeacwcc7c2605d-1306416417.tcb.qcloud.la/appIcon/home_icon2.png?sign=0d3a2d8bc7abe03b9875750e054734b1&t=1625919370"></image>
+                </view>
+                <view class="task_text">
+                    <text class="task_title">我要找你</text>
+                    <text class="task_tip">发布走失任务</text>
+                </view>
+            </navigator>
+        </view>
+    </view>
+</view>
+<view class="nav_tip">
+    <image class="tip_icon" src="https://6669-findyoucloud-9gqeacwcc7c2605d-1306416417.tcb.qcloud.la/appIcon/home_guangbo.png?sign=3f73ba6948549fa578993773e7daa00c&t=1625919382"></image>
+    <text class="tip_text">Tips:关注一疫情防控请在寻人过程中佩戴口罩</text>
+</view>
+<view class="home_content">
+    <view class="content_nav">
+        <button class="nav_btn {{contentCheck == 0?'btn_active':''}}" bindtap="missTaskShow">
+            走失任务
+        </button>
+        <button class="nav_btn {{contentCheck == 1?'btn_active':''}}" bindtap="findTaskShow">
+            寻亲帮助
+        </button>
+        <button class="nav_btn {{contentCheck == 2?'btn_active':''}}" bindtap="rankShow">
+            好人榜
+        </button>
+        <view class="find_btn">
+            <image class="find_img" src="cloud://findyoucloud-9gqeacwcc7c2605d.6669-findyoucloud-9gqeacwcc7c2605d-1306416417/appIcon/home_find.png"></image>
+        </view>
+    </view>
+    <!-- 走失任务列表 -->
+    <view  wx:if= "{{contentCheck == 0}}"  class="content_taskList">
+        <navigator  wx:for="{{taskArray}}" wx:for-index="index" wx:for-item="item" class="content_Task" open-type="navigate" url="../taskMain/taskMain?task={{item._id}}">
+            <view class="task_main">
+                <image class="task_image" src="{{item.misserDetailPics[0]}}"></image>
+                <text class="task_title">{{item.title}}</text>
+            </view>
+            <view class="task_info">
+                <view class="info_item">
+                    <text class="info_title">姓名</text>
+                    <text class="info_value">{{item.misserName}}</text>
+                </view>
+                <view class="info_item">
+                    <text class="info_title">走失时间</text>
+                    <text class="info_value">{{item.misserTime}}</text>
+                </view>
+                <view class="info_item">
+                    <text class="info_title">酬金</text>
+                    <text class="info_value" style="color: red;">{{item.price}}元</text>
+                </view>
+            </view>
+            <view class="task_address">
+                {{item.misserAddress}}
+            </view>
+        </navigator>
+        <!-- <view class="content_Task">
+            <view class="task_main">
+                <image class="task_image" src="cloud://findyoucloud-9gqeacwcc7c2605d.6669-findyoucloud-9gqeacwcc7c2605d-1306416417/appIcon/girl_3.jpg"></image>
+                <text class="task_title">杭州急寻！十一岁女孩走失，走失身穿粉色上衣，蓝色牛仔裤</text>
+            </view>
+            <view class="task_info">
+                <view class="info_item">
+                    <text class="info_title">姓名</text>
+                    <text class="info_value">陈鑫彤</text>
+                </view>
+                <view class="info_item">
+                    <text class="info_title">走失时间</text>
+                    <text class="info_value">3月24日 14：40</text>
+                </view>
+                <view class="info_item">
+                    <text class="info_title">酬金</text>
+                    <text class="info_value" style="color: red;">6000元</text>
+                </view>
+            </view>
+        </view>
+        <view class="content_Task">
+            <view class="task_main">
+                <image class="task_image" src="cloud://findyoucloud-9gqeacwcc7c2605d.6669-findyoucloud-9gqeacwcc7c2605d-1306416417/appIcon/girl_3.jpg"></image>
+                <text class="task_title">杭州急寻！十一岁女孩走失，走失身穿粉色上衣，蓝色牛仔裤</text>
+            </view>
+            <view class="task_info">
+                <view class="info_item">
+                    <text class="info_title">姓名</text>
+                    <text class="info_value">陈鑫彤</text>
+                </view>
+                <view class="info_item">
+                    <text class="info_title">走失时间</text>
+                    <text class="info_value">3月24日 14：40</text>
+                </view>
+                <view class="info_item">
+                    <text class="info_title">酬金</text>
+                    <text class="info_value" style="color: red;">6000元</text>
+                </view>
+            </view>
+        </view> -->
+    </view>
+    <!-- 寻亲任务列表 -->
+    <view wx:elif= "{{contentCheck == 1}}" class="content_taskList">
+        <navigator wx:for="{{findTaskArray}}" wx:for-index="index" wx:for-item="item" open-type="navigate" url="../findTaskMain/findTaskMain?task={{item._id}}" class="content_Task">
+            <view class="task_main">
+                <image class="task_image" src="{{item.misserDetailPics[0]}}"></image>
+                <text class="task_title">{{item.title}}</text>
+            </view>
+            <view class="task_info">
+                <view class="info_item">
+                    <text class="info_title">求助人姓名</text>
+                    <text class="info_value">{{item.misserName}}</text>
+                </view>
+                <view class="info_item">
+                    <text class="info_title">发现时间</text>
+                    <text class="info_value">{{item.misserTime}}</text>
+                </view>
+                <view class="info_item">
+                    <text class="info_title">发现地点</text>
+                    <text class="info_value">{{item.misserAddress}}</text>
+                </view>
+            </view>
+        </navigator>
+    </view>
+    <!-- 好人榜列表 -->
+    <view wx:else="{{contentCheck}}" class="content_rankList">
+        <view class="content_rank" wx:for="{{rankList}}" wx:for-index="index" wx:for-item="item">
+            <view class="rank_info">
+                <view class="rank_image">
+                    <image wx:if="{{item.gender == 1}}" class="user_icon" src="cloud://findyoucloud-9gqeacwcc7c2605d.6669-findyoucloud-9gqeacwcc7c2605d-1306416417/appIcon/home/man.png"></image> 
+                    <image wx:else class="user_icon" src="cloud://findyoucloud-9gqeacwcc7c2605d.6669-findyoucloud-9gqeacwcc7c2605d-1306416417/appIcon/home/women.png"></image> 
+                </view>
+                <view class="rank_name">
+                    <text class="user_name">{{item.userName}}</text>
+                    <text class="user_address">{{item.address}}</text>
+                </view>
+            </view>
+            <view class="rank_value">
+                <text class="user_task">总共完成{{item.taskNumber}}个任务</text>
+                <text class="user_point">{{item.point}}分</text>
+            </view>
+        </view>
+    </view>
+      
+    
+    
+      
+
+</view>
+  

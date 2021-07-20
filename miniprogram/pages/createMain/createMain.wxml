@@ -1,0 +1,13 @@
+<!--pages/createMain/createMain.wxml-->
+<!-- <text>pages/createMain/createMain.wxml</text> -->
+<view class="home">
+    <view class="content">
+        <view class="title">请选择走失对象</view>
+        <view class="value">
+            <button class="family_btn" bindtap="turnToTask"><image class="family_icon" src="cloud://findyoucloud-9gqeacwcc7c2605d.6669-findyoucloud-9gqeacwcc7c2605d-1306416417/appIcon/familyIcon.png"></image>家属走失</button>
+        </view>
+        <view class="value">
+            <button class="pet_btn" bindtap="turnToTaskAn"><image class="pet_icon" src="cloud://findyoucloud-9gqeacwcc7c2605d.6669-findyoucloud-9gqeacwcc7c2605d-1306416417/appIcon/petIcon.png"></image>宠物走失</button>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,112 @@
+.content .check_list {
+  background-color: #fff;
+  letter-spacing: 1rpx;
+  display: flex;
+  justify-content: center;
+}
+.content .check_list .check_item {
+  margin: 22rpx 20rpx 20rpx 20rpx;
+  padding: 20rpx 40rpx;
+  width: 92%;
+  box-shadow: 0px 0px 10px #c9c9d6;
+  border-radius: 15px;
+}
+.content .check_list .check_item .item_top {
+  font-size: 11px;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #c9c9d6;
+}
+.content .check_list .check_item .item_main .name {
+  display: flex;
+  justify-content: left;
+  padding-top: 20rpx;
+}
+.content .check_list .check_item .item_main .name .title {
+  font-size: 14px;
+  color: #969696;
+}
+.content .check_list .check_item .item_main .name .value {
+  font-size: 15px;
+}
+.content .check_list .check_item .item_main .phoneNumber {
+  display: flex;
+  justify-content: left;
+  padding-top: 20rpx;
+}
+.content .check_list .check_item .item_main .phoneNumber .title {
+  font-size: 14px;
+  color: #969696;
+}
+.content .check_list .check_item .item_main .phoneNumber .value {
+  font-size: 15px;
+}
+.content .check_list .check_item .item_main .relation {
+  display: flex;
+  justify-content: left;
+  padding-top: 20rpx;
+}
+.content .check_list .check_item .item_main .relation .title {
+  font-size: 14px;
+  color: #969696;
+}
+.content .check_list .check_item .item_main .relation .value {
+  font-size: 15px;
+}
+.content .check_list .check_item .item_main .introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding-top: 20rpx;
+}
+.content .check_list .check_item .item_main .introduction .title {
+  font-size: 14px;
+  color: #969696;
+}
+.content .check_list .check_item .item_main .introduction .value {
+  padding-top: 10rpx;
+  font-size: 15px;
+}
+.content .check_list .check_item .item_main .image_content {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+.content .check_list .check_item .item_main .image_content .image_box {
+  display: block;
+  width: 92%;
+  margin: auto;
+  padding-top: 20rpx;
+}
+.content .check_list .check_item .item_main .image_content .image_box .image_list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.content .check_list .check_item .item_main .image_content .image_box .image_list .image_item {
+  display: inline-block;
+  text-align: left;
+  margin-right: 20rpx;
+  margin-bottom: 10rpx;
+}
+.content .check_list .check_item .item_main .image_content .image_box .image_list .image_item .upload_image {
+  width: 180rpx;
+  height: 180rpx;
+}
+.content .check_list .check_item .item_bottom {
+  padding-top: 20rpx;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  border-top: 1px solid #c9c9d6;
+}
+.content .check_list .check_item .item_bottom .refuse {
+  background-color: #e73807;
+  color: #fff;
+}
+.content .check_list .check_item .item_bottom .accept {
+  margin-left: 20rpx;
+  background-color: #07e707;
+  color: #fff;
+}

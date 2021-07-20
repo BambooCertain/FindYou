@@ -1,0 +1,37 @@
+<view class="content">
+    <form bindsubmit="findCheckSubmit" style="width: 100%;">
+        <view class="info_content">
+            <view class="title">您的姓名</view>
+            <input type="text" class="value" name="name" placeholder="请输入您的姓名"/>
+            
+            <view class="title">您与走失人的关系</view>
+            <picker mode="selector" range="{{relationArray}}" index="{{index}}" bindchange="bindDataChange">
+                <input class= "value" type="text" placeholder="请选择您与走失者的关系"  name="relation" value="{{relationArray[index]}}"/>
+            </picker>
+        
+            <view class="title">联系电话</view>
+            <input type="text" class="value" name="phoneNumber" placeholder="请输入您的联系方式"/>
+    
+            <view class="title">上传照片</view>
+            <view class="image_content">
+                <view class="image_box">
+                    <view class="image_list">
+                        <block wx:for="{{detailPics}}" wx:key="index">
+                            <view class='image_item'>
+                              <image class="upload_image" src='{{item}}' data-id='{{index}}'></image>
+                            </view>
+                        </block>
+                        <view class="choose_image" bindtap="uploadImage">
+                            <view class="upload_input_box"></view>
+                        </view>
+                    </view>
+                    <view class="image_tips">支持上传多张照片</view>
+                </view>
+            </view>
+        </view>
+       
+        <view class="form_tips">需要上一次审核结束后，才能拿提交新的审核</view>
+        <view class="form_tips">系统审核需要时间，请耐心等待</view>
+        <button class="submit_btn" form-type="submit">提交验证</button>
+    </form>
+</view>

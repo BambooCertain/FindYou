@@ -1,0 +1,205 @@
+/* pages/home/home.wxss */
+.home_nav {
+  height: 25vh;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+.home_nav .background_image {
+  position: absolute;
+  width: 100%;
+  height: 25vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.home_nav .task {
+  position: relative;
+  height: 200rpx;
+  width: 90%;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 10px gray;
+}
+.home_nav .task .task_create {
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+.home_nav .task .task_create .task_item {
+  display: flex;
+  flex: 1;
+  text-align: center;
+  padding: 10rpx;
+}
+.home_nav .task .task_create .task_item .task_image .task_icon {
+  width: 135rpx;
+  height: 135rpx;
+}
+.home_nav .task .task_create .task_item .task_text {
+  text-align: center;
+  margin: auto;
+  padding: 10rpx;
+}
+.home_nav .task .task_create .task_item .task_text .task_title {
+  font-size: 15px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+.home_nav .task .task_create .task_item .task_text .task_tip {
+  color: #aeb5be;
+  font-size: 12px;
+  display: block;
+}
+.nav_tip {
+  position: absolute;
+  left: 50%;
+  width: 90%;
+  height: 30px;
+  transform: translate(-50%, -50%);
+  background-color: #fdf9f3;
+  border-radius: 15px;
+  box-shadow: 0 0 5px gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav_tip .tip_icon {
+  height: 20px;
+  width: 20px;
+}
+.nav_tip .tip_text {
+  font-size: 12px;
+  padding-left: 20px;
+}
+.home_content {
+  position: relative;
+  margin-top: 50rpx;
+}
+.home_content .content_nav {
+  display: flex;
+}
+.home_content .content_nav .nav_btn {
+  font-size: 13px;
+  font-weight: bolder;
+}
+.home_content .content_nav .find_btn {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+.home_content .content_nav .find_btn .find_img {
+  width: 50rpx;
+  height: 50rpx;
+}
+.home_content .content_nav .btn_active {
+  box-shadow: inset 0px -5px gold;
+}
+.content_taskList .content_Task {
+  width: 95%;
+  margin-top: 30rpx;
+}
+.content_taskList .content_Task .task_main {
+  display: flex;
+}
+.content_taskList .content_Task .task_main .task_image {
+  max-width: 200rpx;
+  height: 120rpx;
+  border-radius: 10rpx;
+  margin: 10rpx 20rpx;
+}
+.content_taskList .content_Task .task_main .task_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+.content_taskList .content_Task .task_info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.content_taskList .content_Task .task_info .info_item {
+  padding: 10rpx 25rpx;
+  margin: 5rpx;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f4f4f4;
+  color: #8f8f8f;
+  border-radius: 10rpx;
+}
+.content_taskList .content_Task .task_info .info_item .info_title {
+  font-size: 14px;
+}
+.content_taskList .content_Task .task_info .info_item .info_value {
+  font-size: 14px;
+}
+.content_taskList .content_Task .task_address {
+  color: blue;
+  font-size: 12px;
+  padding-top: 10rpx;
+  padding-left: 30rpx;
+}
+.content_rankList {
+  width: 95%;
+  margin-top: 30rpx;
+}
+.content_rankList .content_rank {
+  border-top: 1px solid #f4f4f4;
+  border-bottom: 1px solid #f4f4f4;
+  display: flex;
+  justify-content: space-between;
+  padding: 15rpx;
+}
+.content_rankList .content_rank .rank_info {
+  display: flex;
+}
+.content_rankList .content_rank .rank_info .rank_image {
+  padding-right: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content_rankList .content_rank .rank_info .rank_image .user_icon {
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 10rpx;
+}
+.content_rankList .content_rank .rank_info .rank_name {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30rpx;
+  justify-content: center;
+  align-items: left;
+}
+.content_rankList .content_rank .rank_info .rank_name .user_name {
+  font-size: 14px;
+}
+.content_rankList .content_rank .rank_info .rank_name .user_address {
+  margin-top: 10rpx;
+  color: #a4a4a4;
+  font-size: 12px;
+}
+.content_rankList .content_rank .rank_value {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+.content_rankList .content_rank .rank_value .user_task {
+  font-size: 12px;
+  color: #a4a4a4;
+}
+.content_rankList .content_rank .rank_value .user_point {
+  margin-top: 10rpx;
+  font-size: 15px;
+  color: #ffa700;
+  font-weight: bolder;
+}

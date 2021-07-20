@@ -1,0 +1,20 @@
+/* 常用标签初始化 */
+page,view,text,swiper,swiper-item,image,navigator{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+/*
+  定义主题颜色
+  1 less 中 存在变量这个知识
+  2 原生的 css 和 wxss 中也支持变量
+ */
+ page{
+   --themeColor:#fa6f10;
+  /* 
+    定义统一的字体大小
+  */
+    font-size: 35rpx;
+   
+ }

@@ -1,0 +1,59 @@
+.home {
+  display: flex;
+  justify-content: center;
+}
+.home .content {
+  padding: 50rpx 0rpx;
+  margin-top: 50rpx;
+  text-align: center;
+  width: 95%;
+  box-shadow: 0px 0px 10px gray;
+  border-radius: 15px;
+}
+.home .content .title {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 25px;
+  margin-bottom: 100rpx;
+}
+.home .content .value {
+  padding: 20rpx 0rpx;
+}
+.home .content .value .family_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0075fb;
+  color: #fff;
+  width: 70%;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 25px;
+}
+.home .content .value .family_btn .family_icon {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+}
+.home .content .value .pet_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  color: #000;
+  width: 70%;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 25px;
+  border: 1px solid;
+}
+.home .content .value .pet_btn .pet_icon {
+  width: 70rpx;
+  height: 70rpx;
+  margin-right: 20rpx;
+}

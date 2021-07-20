@@ -1,0 +1,28 @@
+<!--pages/register/register.wxml-->
+<form bindsubmit="registerSuccess">
+    <view class="user_main">
+        <view class="user_name">
+            <text class="info_title">姓名</text>
+            <input class="info_input"  name="userName" placeholder="填写姓名" />
+        </view>
+        <view class="user_gender">
+            <text class="info_title">性别</text>
+            <input class="info_input" name="userGender" placeholder="填写性别"/>
+        </view>
+        <view class="user_phonenumber">
+            <text class="info_title">联系方式</text>
+            <input class="info_input" name="userPhoneNumber" placeholder="填写联系方式"/>
+        </view>
+        <view class="user_birth">
+            <text class="info_title">出生日期</text>
+            <input class="info_input" name="userBirth" placeholder="填写性别"/>
+        </view>
+        <view class="user_address">
+            <text class="info_title">住址</text>
+            <input class="info_input" name="userAddress"  placeholder="填写住址"/>
+        </view>
+        <button formType="submit">注册</button>
+    </view>    
+</form>
+  
+

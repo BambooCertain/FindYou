@@ -1,0 +1,64 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/createMain/createMain",
+    "pages/task/task",
+    "pages/build/build",
+    "pages/me/me",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/createTask/createTask",
+    "pages/createTaskAn/createTaskAn",
+    "pages/createTaskFind/createTaskFind",
+    "pages/taskMain/taskMain",
+    "pages/taskInfo/taskInfo",
+    "pages/findTaskMain/findTaskMain",
+    "pages/market/market",
+    "pages/findCheck/findCheck",
+    "pages/taskCheck/taskCheck",
+    "pages/createTaskInfo/createTaskInfo"
+  ],
+  "window": {
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fa6f10",
+    "navigationBarTitleText": "找到你",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh":true
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/home/home",
+      "text": "首页",
+      "iconPath": "icon/home.png",
+      "selectedIconPath": "icon/_home.png"
+    },
+    {
+      "pagePath": "pages/task/task",
+      "text": "任务列表",
+      "iconPath": "icon/task.png",
+      "selectedIconPath": "icon/_task.png"
+    },
+    {
+      "pagePath": "pages/build/build",
+      "text": "已发布",
+      "iconPath": "icon/build.png",
+      "selectedIconPath": "icon/_build.png"
+    },
+    {
+      "pagePath": "pages/me/me",
+      "text": "个人中心",
+      "iconPath": "icon/me.png",
+      "selectedIconPath": "icon/_me.png"
+    }],
+    "color": "#000000",
+    "selectedColor": "#0094ff"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于记录您的行进路线" 
+    }
+  }
+}

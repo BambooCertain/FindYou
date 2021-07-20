@@ -1,0 +1,230 @@
+/* pages/home/home.wxss */
+.home_nav{
+    height:25vh;
+    // background-color: var(--themeColor);
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    .background_image{
+        position: absolute;
+        width: 100%;
+        height: 25vh;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .task{
+        position: relative;
+        // top: %;
+        height: 200rpx;
+        width: 90%;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 0 10px gray;
+        .task_create{
+            position: absolute;
+            left: 50%;
+            width: 100%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            display: flex;
+            .task_item{
+                display: flex;
+                flex: 1;
+                text-align: center;
+                padding: 10rpx;
+                // border-radius: 10 rpx;
+                // border: 1px solid black;
+                .task_image{
+                    .task_icon{
+                        width: 135rpx;
+                        height: 135rpx;
+                    }
+                }
+                .task_text{
+                    text-align: center;
+                    margin: auto;
+                    padding:10rpx;
+                    .task_title{
+                        font-size: 15px;
+                        font-weight: bold;
+                        display: block;
+                        margin-bottom: 5px;
+                    }
+                    .task_tip{
+                        color: #aeb5be;
+                        font-size: 12px;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+.nav_tip{
+    position: absolute;
+    left: 50%;
+    width: 90%;
+    height: 30px;
+    transform: translate(-50% ,-50%);
+    background-color: #fdf9f3;
+    // padding: 20px;
+    // border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 0 0 5px gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .tip_icon{
+        height: 20px;
+        width: 20px;
+       
+    }
+    .tip_text{
+        font-size: 12px;
+        padding-left: 20px;
+    }
+}
+
+
+.home_content{
+    position: relative;
+    margin-top: 50rpx;
+    // margin-bottom: 30rpx;
+    // display: flex;
+    .content_nav{
+        display: flex;
+        // width: 80%;
+        // background-color: brown;
+        .nav_btn{
+            font-size: 13px;
+            font-weight: bolder;
+        }
+        
+        .find_btn{
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // background-color:;
+            background-color:transparent;
+            .find_img{
+                // float: right;
+                width: 50rpx;
+                height: 50rpx;
+            }
+        }
+        .btn_active{
+            box-shadow: inset 0px -5px gold;
+        }
+    }
+    
+}
+.content_taskList{
+    .content_Task{
+        width: 95%;
+        margin-top: 30rpx;
+        .task_main{
+            display: flex;
+            .task_image{
+                // object-fit: cover;
+                max-width: 200rpx;
+                height: 120rpx;
+                border-radius: 10rpx;
+                margin:10rpx 20rpx
+            }
+            .task_title{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 14px;
+                // font-weight: bold;
+                letter-spacing: 0.5px;
+            }
+        }
+        .task_info{
+            display: flex;
+            flex-direction: column;
+            flex:1;
+            .info_item{
+                padding: 10rpx 25rpx;
+                margin: 5rpx;
+                display: flex;
+                justify-content: space-between;
+                background-color: #f4f4f4;
+                color: #8f8f8f;
+                border-radius: 10rpx;
+                .info_title{
+                    font-size: 14px;
+                }
+                .info_value{
+                    font-size: 14px;
+                }
+            }
+        }
+        .task_address{
+            color:blue;
+            font-size: 12px;
+            padding-top: 10rpx;
+            padding-left: 30rpx;
+        }
+    }
+}
+
+.content_rankList{
+    width: 95%;
+    margin-top: 30rpx;
+    .content_rank{
+        border-top: 1px solid #f4f4f4;
+        border-bottom: 1px solid #f4f4f4;
+        display: flex;
+        justify-content: space-between;
+        padding: 15rpx;
+        .rank_info{
+            display: flex;
+            .rank_image{
+                padding-right: 20rpx;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .user_icon{
+                    width: 130rpx;
+                    height: 130rpx;
+                    border-radius: 10rpx;
+                }
+            }
+            .rank_name{
+                display: flex;
+                flex-direction: column;
+                margin-left: 30rpx;
+                justify-content: center;
+                align-items: left;
+                .user_name{
+                    font-size: 14px;
+                }
+                .user_address{
+                    margin-top: 10rpx;
+                    color: #a4a4a4;
+                    font-size: 12px;
+                }
+            }
+        }
+        .rank_value{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            .user_task{
+                font-size: 12px;
+                color: #a4a4a4;
+            }
+            .user_point{
+                margin-top: 10rpx;
+                font-size: 15px;
+                color: #ffa700;
+                font-weight: bolder;
+
+            }
+        }
+    }
+}

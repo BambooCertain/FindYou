@@ -1,0 +1,74 @@
+<!--pages/createTask/createTask.wxml-->
+<!-- <text>pages/createTask/createTask.wxml</text> -->
+<view class="task_info">
+    <form bindsubmit="taskSubmit" style="width: 100%;">
+        <view class="task_content">
+          <view class="title">求助者姓名</view>
+          <input class= "value" type="text" placeholder="请输入姓名" name="misser_name"/>
+          
+          <view class="title">求助者年龄</view>
+          <input class= "value" type="text" placeholder="请输入年龄" name="misser_age"/>
+  
+          <view class="title">求助者性别</view>
+          <radio-group name="misser_sex">
+              <label style="padding: 5rpx 20rpx; font-size: 15px; font-weight: bolder;"><radio value = "1" color="#0581fe"/>男</label>
+              <label style="padding: 5rpx 20rpx; font-size: 15px; font-weight: bolder;"><radio value = "0" color="#0581fe"/>女</label>
+          </radio-group>
+          
+          <view class="title">上传照片</view>
+          <view class="image_content">
+              <view class="image_box">
+                  <view class="image_list">
+                      <block wx:for="{{detailPics}}" wx:key="index">
+                          <view class='image_item'>
+                            <image class="upload_image" src='{{item}}' bindlongpress="bindlongpressimg" data-id='{{index}}'></image>
+                          </view>
+                      </block>
+                      <view class="choose_image" bindtap="uploadImage">
+                          <view class="upload_input_box"></view>
+                      </view>
+                  </view>
+                  <view class="image_tips">重新选择即可删除之前图片</view>
+              </view>
+          </view>
+        </view>
+        <view class="task_content">
+          <view class="title">发现地点</view>
+          <input class= "value" type="text" placeholder="请选择走失地点" name="misser_address"/>
+          <view class="title">发现时间</view>
+          <picker mode="date" value="{{date}}" start="2015-09-01" end="2021-09-01" bindchange="bindDateChange">
+            <input class= "value" type="text" placeholder="请选择走失时间"  name="misser_time" value="{{date}}"/>
+          </picker>
+        </view>
+        
+        <!-- <input type="text" placeholder="请输入姓名" name="misser_time"/> -->
+        <!-- <view class="task_content"> -->
+          <!-- <view class="title">联系人是否已经报警</view>
+          <radio-group name="isCallPolice">
+              <label style="padding: 5rpx 20rpx; font-size: 15px; font-weight: bolder;"><radio value = "1" color="#0581fe" />是</label>
+              <label style="padding: 5rpx 20rpx; font-size: 15px; font-weight: bolder;"><radio value = "0" color="#0581fe"/>否</label>
+          </radio-group> -->
+          <!-- <picker mode="selector" index="{{index}}" array="{{isCallPoliceArray}}"  name="isCallPolice"> -->
+          <!-- <input class= "value" type="text" placeholder="是否已经报警" name="isCallPolice"/> -->
+          <!-- <view class="title">设置酬金</view>
+          <input class= "value" type="text" placeholder="请设置酬金" name="price"/> -->
+        <!-- </view> -->
+        <view class="task_content">
+          <view class="title">寻亲标题</view>
+          <input class= "value" type="text" placeholder="填写寻亲标题" name="title"/>
+          <view class="title">亲属描述</view>
+          <textarea class= "value"  placeholder="请尽量描述自身走失情况，提供一定程度家属信息，便于家属认亲" name="introduction" style="width:95%" />
+          <!-- <view class="title"></view> -->
+          
+          <!-- <picker mode="selector" index="{{index}}" array="{{isCallPoliceArray}}"  name="isCallPolice"> -->
+          <!-- <input class= "value" type="text" placeholder="是否已经报警" name="isCallPolice"/> -->
+          <!-- <view class="title">设置酬金</view>
+          <input class= "value" type="text" placeholder="请设置酬金" name="price"/> -->
+        </view>
+        <button class="submit_btn" formType="submit">一键发布</button>
+        
+        <!-- <button bindtap="uploadImage">上传图片</button> -->
+    </form>
+
+
+</view>
